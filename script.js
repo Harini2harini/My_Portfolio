@@ -43,12 +43,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Render Skills
 function renderSkills() {
     const skillsContainer = document.getElementById('skills-container');
-    
+
     portfolioData.skills.forEach((skillGroup, index) => {
         const skillCard = document.createElement('div');
         skillCard.className = 'skill-card reveal';
         skillCard.style.transitionDelay = `${index * 0.1}s`;
-        
+
         skillCard.innerHTML = `
             <div class="skill-icon">${skillGroup.icon}</div>
             <h3 class="text-xl font-semibold text-slate-800 mb-3">${skillGroup.category}</h3>
@@ -63,7 +63,7 @@ function renderSkills() {
                 `).join('')}
             </ul>
         `;
-        
+
         skillsContainer.appendChild(skillCard);
     });
 }
@@ -71,12 +71,12 @@ function renderSkills() {
 // Render Experience
 function renderExperience() {
     const experienceContainer = document.getElementById('experience-container');
-    
+
     portfolioData.experience.forEach((exp, index) => {
         const expCard = document.createElement('div');
         expCard.className = 'experience-card reveal';
         expCard.style.transitionDelay = `${index * 0.2}s`;
-        
+
         expCard.innerHTML = `
             <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div class="mb-2 md:mb-0">
@@ -110,7 +110,7 @@ function renderExperience() {
                 `).join('')}
             </div>
         `;
-        
+
         experienceContainer.appendChild(expCard);
     });
 }
@@ -118,12 +118,12 @@ function renderExperience() {
 // Render Projects
 function renderProjects() {
     const projectsContainer = document.getElementById('projects-container');
-    
+
     portfolioData.projects.forEach((project, index) => {
         const projectCard = document.createElement('div');
         projectCard.className = 'project-card reveal';
         projectCard.style.transitionDelay = `${index * 0.15}s`;
-        
+
         projectCard.innerHTML = `
             <div class="project-image">
                 <span class="text-6xl">${project.icon}</span>
@@ -149,6 +149,13 @@ function renderProjects() {
                             </li>
                         `).join('')}
                     </ul>
+                </div>
+
+                <div class="mt-4 flex items-center text-sm font-semibold text-purple-600">
+                    View Details
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
                 </div>
                 
                 <div class="mb-4">
@@ -177,20 +184,117 @@ function renderProjects() {
                 </div>
             </div>
         `;
-        
+
         projectsContainer.appendChild(projectCard);
+
+        // Add click event for modal
+        projectCard.addEventListener('click', () => {
+            openProjectModal(project);
+        });
     });
 }
+
+// Project Modal Functions
+const modal = document.getElementById('project-modal');
+const modalBody = document.getElementById('modal-body');
+const closeModalBtn = document.getElementById('close-modal');
+const modalBackdrop = document.getElementById('modal-backdrop');
+
+function openProjectModal(project) {
+    modalBody.innerHTML = `
+        <div class="p-8">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-3xl text-white">
+                    ${project.icon}
+                </div>
+                <div>
+                    <span class="text-sm font-bold text-purple-600 uppercase tracking-wider">${project.category}</span>
+                    <h3 class="text-3xl font-bold text-slate-800">${project.title}</h3>
+                </div>
+            </div>
+            
+            <p class="text-lg text-slate-600 mb-8 leading-relaxed">${project.description}</p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-bold text-slate-800 mb-4 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Core Features
+                    </h4>
+                    <ul class="space-y-3">
+                        ${project.features.map(feature => `
+                            <li class="flex items-start text-slate-600">
+                                <svg class="w-5 h-5 mr-2 text-purple-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span>${feature}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-slate-800 mb-4 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                        Technologies Used
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        ${project.technologies.map(tech => `
+                            <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium border border-purple-100">
+                                ${tech}
+                            </span>
+                        `).join('')}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex gap-4 pt-6 border-t border-slate-100">
+                ${project.github ? `
+                    <a href="${project.github}" target="_blank" class="btn-primary flex-1 text-center py-3">
+                        View Code on GitHub
+                    </a>
+                ` : ''}
+                ${project.live ? `
+                    <a href="${project.live}" target="_blank" class="btn-secondary flex-1 text-center py-3">
+                        Live Demo
+                    </a>
+                ` : ''}
+            </div>
+        </div>
+    `;
+
+    modal.classList.remove('hidden');
+    document.body.classList.add('modal-open');
+}
+
+function closeProjectModal() {
+    modal.classList.add('hidden');
+    document.body.classList.remove('modal-open');
+}
+
+// Modal Event Listeners
+closeModalBtn.addEventListener('click', closeProjectModal);
+modalBackdrop.addEventListener('click', closeProjectModal);
+
+// Close modal on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeProjectModal();
+    }
+});
 
 // Scroll Reveal Animation
 function reveal() {
     const reveals = document.querySelectorAll('.reveal');
-    
+
     reveals.forEach(element => {
         const windowHeight = window.innerHeight;
         const elementTop = element.getBoundingClientRect().top;
         const elementVisible = 150;
-        
+
         if (elementTop < windowHeight - elementVisible) {
             element.classList.add('active');
         }
@@ -203,18 +307,18 @@ window.addEventListener('scroll', reveal);
 function updateActiveNavLink() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
-    
+
     let current = '';
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        
+
         if (window.scrollY >= sectionTop - 200) {
             current = section.getAttribute('id');
         }
     });
-    
+
     navLinks.forEach(link => {
         link.classList.remove('text-purple-600');
         if (link.getAttribute('href') === `#${current}`) {
@@ -244,7 +348,7 @@ if (document.readyState === 'loading') {
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.textContent = '';
-    
+
     function type() {
         if (i < text.length) {
             element.textContent += text.charAt(i);
@@ -252,7 +356,7 @@ function typeWriter(element, text, speed = 100) {
             setTimeout(type, speed);
         }
     }
-    
+
     type();
 }
 

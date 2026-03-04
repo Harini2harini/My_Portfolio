@@ -4,26 +4,24 @@ const portfolioData = {
     // Skills Section
     skills: [
         {
-            category: "Programming Languages",
+            category: "Programming & Query Languages",
             icon: "💻",
-            items: ["Python", "Java", "JavaScript", "HTML", "CSS"]
+            items: ["Python", "SQL"]
         },
-        
         {
-            category: "Backend & Databases",
-            icon: "🗄️",
-            items: [ "MySQL"]
+            category: "Libraries / Frameworks",
+            icon: "📚",
+            items: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn"]
         },
         {
             category: "Tools & Platforms",
             icon: "🛠️",
-            items: ["PyCharm", "Visual Studio Code", "GitHub"]
+            items: ["MS Excel", "PowerPoint", "VS Code", "PyCharm", "GitHub"]
         },
-    
         {
-            category: "Soft Skills",
-            icon: "🌟",
-            items: ["Quick Learner", "Critical Thinking", "Problem Solving", "Good Communication"]
+            category: "Web Technologies",
+            icon: "🌐",
+            items: ["HTML", "CSS", "JavaScript"]
         }
     ],
 
@@ -32,18 +30,18 @@ const portfolioData = {
         {
             title: "Virtual Internship 6.0 Batch 10",
             company: "Infosys Springboard",
-            period: "November 2025",
-            location: "Virutal",
+            period: "Nov 2025 - Jan 2026",
+            location: "Virtual",
             description: "Completed a comprehensive virtual internship focused on full-stack development and machine learning integration.",
             achievements: [
-                "Built a complete full-stack application using React.js (frontend) and Django REST Framework (backend)",
-                "Implemented secure authentication using JWT and Google OAuth 2.0, including role-based access control",
-                "Developed REST APIs for user profiles, education, skills, job roles, and prediction endpoints",
-                "Designed responsive UI screens using React and Tailwind CSS",
-                "Trained a Random Forest Classifier achieving more than 92% accuracy for job-role prediction",
+                "Built a complete full-stack application (Edu2Job) using React.js and Django REST Framework",
+                "Implemented secure authentication using JWT and Google OAuth 2.0 with RBAC",
+                "Developed REST APIs for user profiles, education, skills, and prediction endpoints",
+                "Designed responsive UI using React and Tailwind CSS",
+                "Trained a Random Forest Classifier with >92% accuracy for job-role prediction",
                 "Integrated ML model into backend for real-time prediction"
             ],
-            technologies: ["React.js", "Django", "JWT", "OAuth 2.0", "Machine Learning", "Tailwind CSS"]
+            technologies: ["React.js", "Django REST", "JWT", "OAuth 2.0", "Machine Learning", "Tailwind CSS"]
         }
         // Add more experiences here as you gain them
         // Example:
@@ -64,35 +62,47 @@ const portfolioData = {
     // Projects Section
     projects: [
         {
-            title: "Edu2Job - Job Role Predictor",
-            description: "A full-stack web application that predicts suitable job roles based on educational background using machine learning.",
-            category: "Full-Stack Development",
-            technologies: ["React.js", "Django REST", "Machine Learning", "Tailwind CSS", "JWT"],
+            title: "Sales Prediction using EDA",
+            description: "Sales forecasting system using exploratory data analysis and regression models on retail sales data.",
+            category: "Data Analysis",
+            technologies: ["Python", "Pandas", "Scikit-learn", "Matplotlib", "Seaborn"],
             features: [
-                "Responsive web application built with React and Tailwind CSS",
+                "Cleaned and analyzed retail sales data using EDA techniques",
+                "Applied statistical analysis to identify revenue trends and behavior",
+                "Built a Linear Regression model achieving R² = 0.94",
+                "Conducted outlier detection and time-series analysis"
+            ],
+            github: "https://github.com/Harini2harini",
+            icon: "📊"
+        },
+        {
+            title: "PyBank – CLI Banking System",
+            description: "A Python-based terminal banking application supporting secure financial operations and data persistence.",
+            category: "Python Development",
+            technologies: ["Python", "JSON", "SHA-256", "OOP"],
+            features: [
+                "Modular architecture with OOPS concepts",
+                "Secure authentication using SHA-256 PIN hashing",
+                "JSON-based data persistence with backup handling",
+                "Robust input validation for system reliability"
+            ],
+            github: "https://github.com/Harini2harini",
+            icon: "🏦"
+        },
+        {
+            title: "Edu2Job - Job Role Predictor",
+            description: "A full-stack web application that predicts suitable job roles based on educational background.",
+            category: "Full-Stack + ML",
+            technologies: ["React.js", "Tailwind CSS", "Django REST", "Random Forest", "Google OAuth"],
+            features: [
+                "Responsive web application with React and Tailwind CSS",
                 "Secure authentication with JWT and Google OAuth",
-                "Random Forest ML model with 92%+ accuracy",
-                "Real-time job role prediction",
-                "Role-based access control",
-                "RESTful API architecture"
+                "Integrated Random Forest Model for predictions",
+                "RESTful API architecture with Django"
             ],
             github: "https://github.com/Harini2harini",
             live: "https://edu2-job-kohl.vercel.app",
             icon: "🎓"
-        },
-        {
-            title: "Sales Prediction System",
-            description: "Data analysis and prediction system for sales forecasting using exploratory data analysis and regression models.",
-            category: "Data Analysis",
-            technologies: ["Python", "Pandas", "Machine Learning", "Data Visualization"],
-            features: [
-                "Cleaned and analyzed sales data using EDA techniques",
-                "Built multiple regression models for prediction",
-                "Visualized trends and patterns in sales data",
-                "Generated actionable insights from data"
-            ],
-            github: "https://github.com/Harini2harini",
-            icon: "📊"
         }
         // Add more projects here as you complete them
         // Example:

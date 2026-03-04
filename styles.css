@@ -169,7 +169,7 @@ body {
     height: 3rem;
     display: flex;
     align-items: center;
-    justify-center;
+    justify-content: center;
     border-radius: 0.75rem;
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: white;
@@ -213,7 +213,7 @@ body {
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     display: flex;
     align-items: center;
-    justify-center;
+    justify-content: center;
     color: white;
     font-size: 3rem;
 }
@@ -240,6 +240,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -251,6 +252,7 @@ body {
         opacity: 0;
         transform: translateX(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -262,6 +264,7 @@ body {
         opacity: 0;
         transform: translateX(30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -311,11 +314,11 @@ html {
     .section-title {
         font-size: 2rem;
     }
-    
+
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1.5rem;
     }
@@ -346,6 +349,36 @@ input:focus,
 textarea:focus {
     outline: 2px solid var(--primary);
     outline-offset: 2px;
+}
+
+/* Modal Custom Styles */
+.scale-in {
+    animation: scaleIn 0.3s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+#modal-body {
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.project-card {
+    cursor: pointer;
 }
 
 /* Selection Color */
