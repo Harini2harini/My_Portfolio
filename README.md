@@ -1,18 +1,4 @@
-# M Harini – Data Analyst Portfolio
+# Portfolio Website
 
-A professional and responsive portfolio website showcasing skills, experience, and projects.
-Built with HTML, CSS (Tailwind), and JavaScript.
+A professional and responsive portfolio website showcasing my skills, experience, and projects. Built with HTML, CSS, Tailwind CSS, and JavaScript, this portfolio features a clean, modern design with smooth animations and is fully responsive across all devices.
 
-## Files
-- `index.html` – Main HTML page
-- `styles.css` – Custom styles
-- `data.js` – All portfolio content (edit this to update your info)
-- `script.js` – Rendering logic and interactions
-- `profile.jpg` – Profile photo
-- `Harini_Resume__3_.pdf` – Resume
-
-## Running Locally
-```
-npx serve .
-```
-Then open http://localhost:3000
