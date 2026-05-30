@@ -16,7 +16,7 @@ const portfolioData = {
         {
             category: "Tools & Platforms",
             icon: "🛠️",
-            items: ["MS Excel", "Power BI", "PowerPoint", "VS Code", "PyCharm", "Jupyter Notebook"]
+            items: ["MS Excel", "Power BI", "PowerPoint", "VS Code", "PyCharm"]
         },
         {
             category: "Soft Skills",
@@ -46,22 +46,6 @@ const portfolioData = {
     // Projects Section
     projects: [
         {
-            title: "SQL Customer Behaviour Analysis",
-            subtitle: "Food Delivery Platform",
-            description: "Built and queried a relational MySQL database modelling 18 months of food delivery transactions across 6 cities to uncover retention, revenue, and customer behavior insights.",
-            category: "SQL / Data Analysis",
-            technologies: ["MySQL", "SQL", "Window Functions", "CTEs", "RFM Segmentation"],
-            features: [
-                "Built and queried a relational MySQL database modelling 18 months of food delivery transactions across 6 cities",
-                "Wrote 18 business-driven SQL queries covering revenue trends, customer churn, discount impact, and regional performance",
-                "Performed customer cohort retention analysis and RFM segmentation using window functions (LAG, RANK, NTILE) and multi-level CTEs",
-                "Identified repeat vs. one-time customer patterns and purchase cadence to support retention and marketing decisions"
-            ],
-            github: "https://github.com/Harini2harini",
-            icon: "🍕",
-            highlight: "18 Business-Driven Queries"
-        },
-        {
             title: "Sales Prediction using EDA",
             subtitle: "Retail Revenue Forecasting",
             description: "Sales forecasting system using exploratory data analysis and regression models on retail sales data to identify trends and predict revenue.",
@@ -78,20 +62,20 @@ const portfolioData = {
             highlight: "R² = 0.94 Accuracy"
         },
         {
-            title: "PyBank – CLI Banking System",
-            subtitle: "Python Terminal Application",
-            description: "A Python-based terminal banking application supporting secure financial operations, account management, and persistent data storage using OOP.",
-            category: "Python Development",
-            technologies: ["Python", "JSON", "SHA-256", "OOP", "Modular Architecture"],
+            title: "Superstore Sales Analysis",
+            subtitle: "MySQL Data Analysis",
+            description: "Analyzed 9,994 sales records using MySQL to uncover profit margins, seasonal sales trends, and customer behaviour insights.",
+            category: "SQL / Data Analysis",
+            technologies: ["MySQL", "SQL", "Aggregate Functions", "GROUP BY", "Window Functions"],
             features: [
-                "Developed a Python CLI banking app supporting account creation, deposits, withdrawals, and fund transfers using OOP and modular architecture",
-                "Secured authentication with SHA-256 PIN hashing and account lockout mechanism",
-                "Implemented JSON-based data persistence with backup handling",
-                "Robust input validation and error handling for system reliability"
+                "Analyzed 9,994 sales records using MySQL",
+                "Performed sales, customer, profit and time-based analysis",
+                "Used aggregate functions, GROUP BY, HAVING, date functions and window functions",
+                "Identified insights such as 2.49% furniture profit margin and seasonal sales trends"
             ],
             github: "https://github.com/Harini2harini",
-            icon: "🏦",
-            highlight: "SHA-256 Secure Auth"
+            icon: "🏪",
+            highlight: "9,994 Records Analyzed"
         },
         {
             title: "Edu2Job – Job Role Predictor",
@@ -113,27 +97,21 @@ const portfolioData = {
     ],
 
     // Certifications
-    // HOW TO ADD A NEW CERTIFICATE:
-    // 1. Add your certificate image to the repo (e.g. certificates/my-cert.jpg)
-    // 2. Add a new object below following the same pattern
-    // 3. For a PDF certificate, set type: "pdf" and use the .pdf file path
-    // 4. For an external link (e.g. Credly/Coursera), set type: "link" and fill the "link" field
     certifications: [
         {
             title: "Virtual Internship 6.0 Completion",
             issuer: "Infosys Springboard",
             date: "Jan 2026",
             icon: "🏅",
-            image: "certificates/infosys-internship.pdf",  // ← add your PDF/image file here
-            // link: "https://...",
-            type: "badge"  // badge | image | pdf | link
+            image: "certificates/infosys-internship.pdf",
+            type: "badge"
         },
         {
             title: "Pragathi: Path to Future – Cohort 5",
             issuer: "Infosys Springboard",
             date: "Sep 2025",
             icon: "🎓",
-            image: "certificates/pragathi-cohort5.pdf",  // ← add your PDF/image file here
+            image: "certificates/pragathi-cohort5.pdf",
             type: "badge"
         },
         {
@@ -141,7 +119,7 @@ const portfolioData = {
             issuer: "AWS Academy",
             date: "Sep 2025",
             icon: "☁️",
-            image: "certificates/aws-genai.pdf",  // ← add your PDF/image file here
+            image: "certificates/aws-genai.pdf",
             link: "https://www.credly.com/badges/e793efe4-b2c5-4564-ad27-bf154d4c9a38",
             type: "badge"
         },
@@ -150,7 +128,7 @@ const portfolioData = {
             issuer: "HackerRank",
             date: "Apr 2026",
             icon: "🗄️",
-            image: "certificates/sql-basic.pdf",  // ← add your PDF/image file here
+            image: "certificates/sql-basic.pdf",
             type: "badge"
         },
         {
@@ -183,8 +161,6 @@ const portfolioData = {
     ],
 
     // Achievements
-    // HOW TO ADD A NEW ACHIEVEMENT:
-    // Copy one of the objects below, fill in your details, and add it to the array.
     achievements: [
         {
             title: "Google Developer Group (GDG) On Campus – Swag Kit Recognition",
@@ -192,7 +168,7 @@ const portfolioData = {
             icon: "🎁",
             category: "Community Recognition",
             year: "2026",
-            image: "certificates/gdg-swag-kit.jpeg"  // ← swag kit photo
+            image: "certificates/gdg-swag-kit.jpeg"
         }
         // ── TEMPLATE FOR NEW ACHIEVEMENT ──────────────────────────────
         // {
@@ -220,7 +196,7 @@ const portfolioData = {
         title: "Aspiring Data Analyst",
         location: "India",
         availability: "Seeking Data Analyst Internship",
-        cgpa: "9.14",
+        cgpa: "9.1",
         college: "GRT Institute of Engineering and Technology",
         degree: "B.E. Computer Science and Engineering (2023–2027)"
     }
