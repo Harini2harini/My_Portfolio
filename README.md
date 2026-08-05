@@ -1,4 +1,4 @@
-# M Harini — Data Analyst Portfolio
+# Harini —  Portfolio
 
 A responsive portfolio website built with HTML, Tailwind CSS, and JavaScript, showcasing data analysis projects, Power BI dashboards, and experience.
 
