@@ -17,9 +17,3 @@ A responsive portfolio website built with HTML, Tailwind CSS, and JavaScript, sh
   - `hospital-management/` — Hospital Management Dashboard (Overview + Revenue + Doctors/Patients pages)
   - `customer-churn/` — Customer Churn Analysis Dashboard
 
-> **Note:** The HR Attrition dashboard's "Overview" page screenshot is still missing. It and the Hospital dashboard's Overview page were both originally uploaded as `Page_1_-_Overview.jpg`, and the second one overwrote the first before it could be saved. The HR project currently shows only its Attrition and Worklife pages. Re-upload that missing image (any unique filename works) and I'll drop it into `assets/dashboards/hr-attrition/` and add it to the project's image list.
-
-## Run locally
-```
-npx serve .
-```
