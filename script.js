@@ -116,8 +116,8 @@ function renderProjects() {
         projectCard.innerHTML = `
             <!-- Card Header (always visible) -->
             <div class="project-card-header">
-                <div class="project-image">
-                    <span class="text-6xl">${project.icon}</span>
+                <div class="project-image" ${project.image ? `style="background-image:url('${project.image}');background-size:cover;background-position:center;"` : ''}>
+                    ${project.image ? '<div class="project-image-overlay"></div>' : `<span class="text-6xl">${project.icon}</span>`}
                     <div class="project-highlight">${project.highlight}</div>
                 </div>
                 <div class="project-content">
@@ -161,6 +161,34 @@ function renderProjects() {
                                     </li>
                                 `).join('')}
                             </ul>
+
+                            ${project.images && project.images.length ? `
+                            <h4 class="text-sm font-bold text-slate-700 mb-3 flex items-center">
+                                <svg class="w-4 h-4 mr-1 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14M4 8h16M4 4h16v16H4V4z"/>
+                                </svg>
+                                Dashboard Preview
+                            </h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
+                                ${project.images.map(img => `
+                                    <a href="${img}" target="_blank" onclick="event.stopPropagation()">
+                                        <img src="${img}" alt="${project.title}" class="rounded-lg border border-slate-200 hover:border-purple-300 transition w-full" />
+                                    </a>
+                                `).join('')}
+                            </div>
+                            ` : (project.image ? `
+                            <h4 class="text-sm font-bold text-slate-700 mb-3 flex items-center">
+                                <svg class="w-4 h-4 mr-1 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14M4 8h16M4 4h16v16H4V4z"/>
+                                </svg>
+                                Dashboard Preview
+                            </h4>
+                            <div class="mb-5">
+                                <a href="${project.image}" target="_blank" onclick="event.stopPropagation()">
+                                    <img src="${project.image}" alt="${project.title}" class="rounded-lg border border-slate-200 hover:border-purple-300 transition w-full" />
+                                </a>
+                            </div>
+                            ` : '')}
 
                             <h4 class="text-sm font-bold text-slate-700 mb-2 flex items-center">
                                 <svg class="w-4 h-4 mr-1 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -386,6 +414,7 @@ function renderAchievements() {
                     </div>
                     <h3 class="ach-title">${item.title}</h3>
                     <p class="ach-desc">${item.description}</p>
+                    ${item.link ? `<a href="${item.link}" target="_blank" onclick="event.stopPropagation()" class="ach-link-btn">View Profile ↗</a>` : ''}
                 </div>
             </div>
         `;

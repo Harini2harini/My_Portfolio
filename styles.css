@@ -242,6 +242,12 @@ body {
     border: 1px solid rgba(255,255,255,0.4);
 }
 
+.project-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(124,58,237,0.15), rgba(30,41,59,0.55));
+}
+
 .project-content {
     padding: 1.25rem;
 }
@@ -632,6 +638,25 @@ body.modal-open {
     color: #64748b;
     line-height: 1.65;
     margin: 0;
+}
+
+.ach-link-btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--primary);
+    background: #f3e8ff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    align-self: flex-start;
+    transition: all 0.2s ease;
+}
+
+.ach-link-btn:hover {
+    background: var(--primary);
+    color: white;
 }
 
 @media (max-width: 600px) {
