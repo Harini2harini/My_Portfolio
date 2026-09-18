@@ -260,6 +260,32 @@ const portfolioData = {
             icon: "🌐",
             image: "certificates/nptel-iot.pdf",
             type: "pdf"
+        },
+        {
+            title: "Data Visualization and Presentation",
+            issuer: "IBM SkillsBuild",
+            date: "Sep 2026",
+            icon: "📈",
+            image: "certificates/IBM- Data Visualization and Presentation.pdf",
+            link: "https://www.credly.com/badges/417b23fd-8905-4d4f-9107-8d7080d5818d",
+            type: "badge"
+        },
+        {
+            title: "SQL and Relational Databases 101",
+            issuer: "IBM Skills Network (Cognitive Class)",
+            date: "Jan 2025",
+            icon: "🗄️",
+            image: "certificates/SQL and Relational Databases 101.pdf",
+            link: "https://courses.cognitiveclass.ai/certificates/37e3b5474ed1450c9865c3a014183669",
+            type: "pdf"
+        },
+        {
+            title: "Data Visualisation: Empowering Business with Effective Insights",
+            issuer: "Forage",
+            date: "Sep 2026",
+            icon: "📊",
+            image: "certificates/Data Visualisation -Empowering Business with Effective Insights.pdf",
+            type: "pdf"
         }
         // ── TEMPLATE FOR NEW CERTIFICATE ──────────────────────────────
         // {
