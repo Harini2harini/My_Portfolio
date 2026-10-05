@@ -36,7 +36,7 @@ const portfolioData = {
             title: "Founder's Office Intern",
             company: "Zapygo Energy Pvt. Ltd.",
             period: "Jul 2026 – Present",
-            location: "Tiruttani, Tamil Nadu",
+            location: "Remote / India",
             description: "Working directly with the founder at a startup, supporting data-driven decisions through research, process automation, hiring coordination, and product QA.",
             achievements: [
                 "Built an automated Google Form to Sheets pipeline to track employee and candidate details in real time",
