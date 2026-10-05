@@ -33,6 +33,21 @@ const portfolioData = {
     // Experience Section
     experience: [
         {
+            title: "Founder's Office Intern",
+            company: "Zapygo Energy Pvt. Ltd.",
+            period: "Jul 2026 – Present",
+            location: "Tiruttani, Tamil Nadu",
+            description: "Working directly with the founder at a startup, supporting data-driven decisions through research, process automation, hiring coordination, and product QA.",
+            achievements: [
+                "Built an automated Google Form to Sheets pipeline to track employee and candidate details in real time",
+                "Managed the candidate hiring pipeline, coordinating interview outreach and follow-ups with applicants",
+                "Conducted market research on global fuel delivery startups to support founder-level strategic decisions",
+                "Researched startup funding avenues and grants, and compiled a comparative report for the company",
+                "Conducted structured QA testing across company apps and delivered bug reports to the founder"
+            ],
+            technologies: ["Google Sheets", "Google Forms", "Market Research", "QA Testing", "Reporting"]
+        },
+        {
             title: "Virtual Internship 6.0 – Batch 10",
             company: "Infosys Springboard",
             period: "Nov 2025 – Jan 2026",
@@ -82,6 +97,25 @@ const portfolioData = {
             icon: "☕",
             image: "assets/dashboards/coffee-sales/Dashboard.jpg",
             highlight: "150K+ Transactions"
+        },
+        {
+            title: "Zomato Analytics Dashboard",
+            subtitle: "SQL Server & Power BI | 150K+ Orders, 4-Page Dashboard",
+            description: "End-to-end analytics project on a Zomato-style food delivery dataset, using SQL for exploration, cleaning, and KPI queries, and Power BI for an interactive 4-page dashboard.",
+            category: "SQL / Power BI",
+            technologies: ["SQL Server", "Power BI", "DAX", "Data Modeling", "Data Cleaning"],
+            features: [
+                "Explored and cleaned a 5-table relational dataset (150K+ orders, 148K+ restaurants across 821 cities, 100K+ users) using SQL, handling invalid values, placeholder text, and orphan foreign keys",
+                "Wrote 9 KPI queries covering revenue, orders, top restaurants and cities, veg/non-veg split, age-group orders, and monthly revenue trends",
+                "Built the data model with a bridge table to split multi-value cuisine entries into individual rows while keeping one-to-many relationships intact",
+                "Designed 4 dashboard pages (Overview, Restaurant, Customer, and Food/Menu Insights) with KPI cards, visuals, and slicers",
+                "Found that 72.88% of menu items are vegetarian, and that big brands like Domino's, KFC, and Pizza Hut dominate revenue over independent restaurants"
+            ],
+            github: "https://github.com/Harini2harini/Zomato_Analytics_Dashboard",
+            icon: "🍔",
+            image: "assets/dashboards/zomato-analytics/zomato-overview.jpg",
+            images: ["assets/dashboards/zomato-analytics/zomato-overview.jpg", "assets/dashboards/zomato-analytics/zomato-restaurant.jpg", "assets/dashboards/zomato-analytics/zomato-customer.jpg", "assets/dashboards/zomato-analytics/zomato-food-menu.jpg"],
+            highlight: "150K+ Orders Analyzed"
         },
         {
             title: "Amazon Sales Dashboard",
@@ -345,7 +379,7 @@ const portfolioData = {
         title: "Aspiring Data Analyst",
         location: "India",
         availability: "Seeking Data Analyst Internship",
-        cgpa: "9.1",
+        cgpa: "9.18",
         college: "GRT Institute of Engineering and Technology",
         degree: "B.E. Computer Science and Engineering (2023–2027)"
     }
